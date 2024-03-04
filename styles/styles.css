@@ -1,4 +1,130 @@
-.caixao{
-    border: 1px slid black;
-    margin: 40px;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header, .site-footer {
+    background-color: rgb(54, 135, 248);
+    color: black;
+    padding: 20px 0;
+}
+
+.main-navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-navigation a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.main-navigation li {
+    display: inline;
+    padding: 0 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.sobre-mim-section h1 h3 {
+    text-align: center;
+    padding: 20px 0;
+    margin: 5px 0;
+}
+
+.sobre-mim-section p {
+    margin: 10px;
+    text-align: start;
+}
+
+.foto-perfil {
+    float: left;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 20px;
+
+}
+
+.projetos-section, .formacao-section, .contatos-section {
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.grade-projetos{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item-projeto {
+    background-color: white;
+    box-shadow: 0 0 10px #b9b8b8;
+}
+
+.item-projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: container;
+    border-bottom: 3px solid #b9b8b8;
+}
+
+.info-projetos {
+    padding: 10px;
+}
+
+.botao-section {
+    display: flex;
+    justify-content: left;
+    margin: 20px;
+  }
+
+  .img-contatos {
+    margin: 10px 0;
+    width: 75px;
+    height: 75px;
+  }
+
+  .div-contatos {
+    margin: 20px;
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+    object-fit: cover;
+    list-style-type: none;
+  }
+
+@media tela and (max-width: 768px){
+    .main-navigation ul {
+        flex-direction: column;
+    }
+    .main-navigation li {
+        margin-bottom: 10px;
+        font-size: large;
+    }
+    .foto-perfil {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
 }

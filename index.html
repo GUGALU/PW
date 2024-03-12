@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/styles.css" rel="stylesheet">
     <title>Portifólio Gustavo Polli</title>
-    <meta name="description" content="Portifolio Gsuatvo Manoel Dias Polli">
+    <meta name="description" content="Portifolio Gustavo Manoel Dias Polli">
     <meta name="keyword" content="desenvolvedor web, portifólio, 
     projetos web, programação">
     <meta name="author" content="Gsuatvo Manoel Dias Polli">
@@ -19,16 +19,18 @@
     <header class="site-header">
         <nav class="main-navigation">
             <ul>
-                <li><a href="#sobreMim">Sobre mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#contatos">Contatos</a></li>
+                <li><a target="_blank" href="#sobreMim">Sobre mim</a></li>
+                <li><a target="_blank" href="#projetos">Projetos</a></li>
+                <li><a target="_blank" href="#expericencia">Experiências profissional</a></li>
+                <li><a target="_blank" href="#tecnologias">Tecnologias</a></li>
+                <li><a target="_blank" href="#formacao">Formação</a></li>
+                <li><a target="_blank" href="#contatos">Contatos</a></li>
             </ul>
         </nav>
     </header>
     <main class="container">
-        <section class="sobre-mim-section">
-            <img class="foto-perfil" src="imgs/eu.png" alt="Minha foto">
+        <section id="sobreMim" class="sobre-mim-section">
+            <img class="foto-perfil" src="imgs/Eu.jpg" alt="Minha foto">
             <h1>Sobre mim</h1>
             <h3>Olá, eu sou o Gustavo Polli...</h3>
             <p>
@@ -37,69 +39,117 @@
                 busco aprender desenvolvimento de software e outras linguagens de programação e tecnologias, 
                 atualmente tenho experiência com linguagens C#, Java, PHP, Java Script, PYTHON e Dart(Flutter) e 
                 algumas de suas frameworks e bibliotecas. 
-                Também conheço os tipos de diagramas e tenho experiência com bancos de dados (MySQL).
+                Também conheço os tipos de diagramas e tenho experiência com bancos de dados MySQL, SQLServer e PostgreSQL.
                 Busco sempre o meu melhor, prefiro sempre o máximo de organização possível, gosto muito de trabalhos em grupo, 
                 e sempre ser prestativo.
                 Sou fluente em leitura/escrita do inglês e compreendo/falo bem.
             </p>
-            <h1>About me</h1>
-            <h3>Hello, my name is Gustavo Polli...</h3>
-            <p>
-                I'm a 3rd year Software Engineering student at IFPR. Beginner in programming and IT, I have always been
-                passionate about technology and computers,
-                I seek to learn software development and other programming languages ​​and technologies,
-                I currently have experience with C#, Java, PHP, Java Script, PYTHON and Dart (Flutter) languages ​​and
-                some of its frameworks and libraries.
-                I also know the types of diagrams and have experience with databases (MySQL).
-                I always look for my best, I always prefer as much organization as possible, I really like group work,
-                and always be helpful.
-            </p>
         </section>
-        <section class="projetos-section">
-            <h2>Projetos / Projects</h2>
+        <section id="projetos" class="projetos-section">
+            <h2>Projetos</h2>
             <div class="grade-projetos">
                 <article class="item-projeto">
-                    <img src="imgs/chupeta.jpg" alt="Foto do projeto">
-                    <div class="info-projetos">
-                        <h3>Cachorro chupetão</h3>
-                        <p>É um cahorro chupetão</p>
-                    </div>
+                    <a target="_blank" href="https://github.com/GUGALU/Curso-Dart-Flutter">
+                        <img src="imgs/flutter.png" alt="Foto do projeto">
+                        <div class="info-projetos">
+                            <h3>Aplicativos Flutter</h3>
+                            <p>Aplicativos desenvolvidos durante curso de Dart Flutter</p>
+                        </div>
+                    </a>
                 </article>
                 <article class="item-projeto">
-                    <img src="imgs/chupeta.jpg" alt="Foto do projeto">
-                    <div class="info-projetos">
-                        <h3>Cachorro chupetão</h3>
-                        <p>É um cahorro chupetão</p>
-                    </div>
+                    <a target="_blank" href="https://github.com/GUGALU/Calculadora-Assembly">
+                        <img src="imgs/calculadora-mips.png" alt="Foto do projeto">
+                        <div class="info-projetos">
+                            <h3>Calculadora Assembly</h3>
+                            <p>Calculadora desenvolvida em ASM MIPS Mars4</p>
+                        </div>
+                    </a>
                 </article>
                 <article class="item-projeto">
-                    <img src="imgs/chupeta.jpg" alt="Foto do projeto">
-                    <div class="info-projetos">
-                        <h3>Cachorro chupetão</h3>
-                        <p>É um cahorro chupetão</p>
-                    </div>
+                    <a target="_blank" href="https://github.com/GUGALU/commit-observer">
+                        <img src="imgs/commit-observer.png" alt="Foto do projeto">
+                        <div class="info-projetos">
+                            <h3>Commit Observer</h3>
+                            <p>Bot para Discord que diz quem realizou ou não um commit no GitHub naquele dia</p>
+                        </div>
+                    </a>
                 </article>
             </div>
         </section>
-        <section class="formacao-section">
-            <h2>Formação academica / Academic Education</h2>
-            <div class="linha-formacao">
+        <section id="expericencia" class="expericencia-section">
+            <h2>Experiência profissional</h2>
+            <p>
+                <strong>Estágio em desenvolvimento Web Fullstack - IziDev Sistemas</strong><br>
+                Outubro de 2023 - Novembro de 2023 <br>
+                <strong>Estágio em desenvolvimento Web Fullstack - Universidade Fatecie</strong><br>
+                Fevereiro de 2024 - atualmente
+            </p>
+        </section>
+        <section id="tecnologias" class="tecnologias-section">
+            <h2>Tecnologias</h2>
+            <div class="tecnologias-itens">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="bootstrap logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="40" alt="c logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="40" alt="flutter logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" alt="php logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="java logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="40" alt="spring logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" alt="figma logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git logo"  />
+                <img width="12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" height="40" alt="trello logo"  />
+              </div>
+        </section>
+        <section id="formacao"class="formacao-section">
+            <h2>Formação academica</h2>
+            <div>
                 <h3>Ensino médio</h3>
                 <p>Fundação Bradesco</p>
-                <p>finalizado em 2021</p>
+                <p>Finalizado em 2021</p>
+                <h3>Ensino superior</h3>
+                <p>
+                    Instituto Federal do Parana - Paranavaí <br/>
+                    Engenharia de Software - 3º ano - 5º semestre
+                </p>
+                <p>2022 - 2025</p>
             </div>
         </section>
-        <section class="contatos-section">
-            <h2>Contatos / Contact</h2>
+        <section id="contatos" class="contatos-section">
+            <h2>Contatos</h2>
             <div class="div-contatos">
-                <a href="mailto:gustavomanoeldiaspolli@gmail.com" class="img-contatos">
+                <a target="_blank" href="mailto:gustavomanoeldiaspolli@gmail.com" class="img-contatos">
                     <img src="imgs/gmail.png" class="img-contatos" alt="Gmail">
                 </a>
-                <a href="https://www.instagram.com/gustavo.poll1/" class="img-contatos">
+                <a target="_blank" href="https://www.instagram.com/gustavo.poll1/" class="img-contatos">
                     <img src="imgs/instagram.png" class="img-contatos" alt="Instagram">
                 </a>
-                <a href="https://github.com/GUGALU" class="img-contatos">
+                <a target="_blank" href="https://github.com/GUGALU" class="img-contatos">
                     <img src="imgs/github.png" class="img-contatos" alt="GitHub">
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/gustavo-manoel-dias-polli-ba5058211/" class="img-contatos">
+                    <img src="imgs/linkedin.png" class="img-contatos" alt="Linkedin">
                 </a>
             </div>
           </section>

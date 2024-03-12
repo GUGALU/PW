@@ -1,14 +1,19 @@
-* {
+@import url(variable.css);
+
+*, *::before, *::after {
     padding: 0;
     margin: 0;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: whitesmoke;
 }
 
 .site-header, .site-footer {
-    background-color: rgb(54, 135, 248);
+    background-color: var(--secondary-color);
     color: black;
     padding: 20px 0;
 }
@@ -18,12 +23,12 @@ body {
     justify-content: center;
     list-style-type: none;
     padding: 20px;
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 .main-navigation a {
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     margin-bottom: 10px;
 }
@@ -57,12 +62,16 @@ body {
     height: 250px;
     object-fit: cover;
     margin: 20px;
-
+    animation: fadeIn 2s ease-in-out;
 }
 
-.projetos-section, .formacao-section, .contatos-section {
-    padding: 20px 0;
-    margin: 20px 0;
+.projetos-section, 
+.sobre-mim-section, 
+.formacao-section, 
+.contatos-section, 
+.tecnologias-section,
+.experiencia-section {
+    padding: 50px 0;
 }
 
 .clearfix::after {
@@ -72,41 +81,54 @@ body {
 }
 
 .grade-projetos{
+    border-radius: 16px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .item-projeto {
-    background-color: white;
-    box-shadow: 0 0 10px #b9b8b8;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--third-color);
+    transition: box-shadow var(--transition-speed);
+    border-radius: 16px;
+}
+
+.item-projeto:hover {
+    box-shadow: 0 0 15px #000000;
+    transform:  translate3d(0px, -1px, 0px);
 }
 
 .item-projeto img {
     width: 100%;
     height: 200px;
     object-fit: container;
-    border-bottom: 3px solid #b9b8b8;
+    border-bottom: 3px solid var(--third-color);
+    border-radius: 16px;
+    transform:  translate3d(0px, -1px, 0px);
+}
+
+.item-projeto a{
+    text-decoration: none;
+    color: #000000;
 }
 
 .info-projetos {
     padding: 10px;
 }
 
-.botao-section {
-    display: flex;
-    justify-content: left;
-    margin: 20px;
-  }
+.info-projetos h3, .info-projetos p {
+    text-decoration: none;
+    color: #000000;
+}
 
-  .img-contatos {
+.img-contatos {
     margin: 10px 0;
     width: 75px;
     height: 75px;
   }
 
-  .div-contatos {
-    margin: 20px;
+.div-contatos {
     display: flex;
     justify-content: left;
     padding: 5px;
@@ -114,7 +136,20 @@ body {
     list-style-type: none;
   }
 
-@media tela and (max-width: 768px){
+.tecnologias-section h2 {
+    margin: 5px 0;
+}
+
+.tecnologias-itens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    list-style-type: none;
+}
+
+@media screen and (max-width: 768px){
     .main-navigation ul {
         flex-direction: column;
     }
@@ -127,4 +162,9 @@ body {
         display: block;
         margin: 0 auto;
     }
+}
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
 }

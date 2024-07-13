@@ -37,6 +37,11 @@ body {
     display: inline;
     padding: 0 15px;
 }
+.main-navigation {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
 
 .container {
     max-width: 1200px;
@@ -167,4 +172,23 @@ body {
 @keyframes fadeIn {
     from{opacity: 0;}
     to{opacity: 1;}
+}
+.dark-mode-button {
+    display: flex;
+    background-color: #000000;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-self: center; /* Adicionado para alinhar verticalmente */
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.dark-mode-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: box-shadow var(--transition-speed);
 }

@@ -1,9 +1,6 @@
 // função para ativar e desativar dark mode
 function darkModeButton() {
-  const button = document.createElement("button");
-  button.id = "dark";
-  button.innerText = "Modo Escuro";
-  document.body.appendChild(button);
+  const themeButton = document.getElementById("theme-button");
 }
 
 // função para copiar contatos para o clipboard/area de transferência
@@ -71,3 +68,10 @@ function fetchRepositories() {
 }
 
 fetchRepositories();
+
+// função para exibir o ano atual no footer
+document.addEventListener("DOMContentLoaded", function() {
+  const yearSpan = document.getElementById("current-year");
+  const currentYear = new Date().getFullYear();
+  yearSpan.textContent = currentYear;
+});

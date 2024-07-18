@@ -11,15 +11,19 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
     background-color: var(--body-color);
 }
 
 .site-header,
 .site-footer {
     background-color: var(--secondary-color);
-    color: black;
+    color: var(--primary-color);
     padding: 20px 0;
+}
+
+.site-footer {
+    text-align: center;
 }
 
 .main-navigation {
@@ -98,13 +102,13 @@ section {
 
 .item-projeto {
     background-color: var(--primary-color);
-    box-shadow: 0 0 10px var(--third-color);
+    box-shadow: 0 0 10px var(--shadow-color);
     transition: box-shadow var(--transition-speed);
     border-radius: 16px;
 }
 
 .item-projeto:hover {
-    box-shadow: 0 0 15px #000000;
+    box-shadow: 0 0 15px var(--shadow-color);
     transform: translate3d(0px, -1px, 0px);
 }
 
@@ -118,7 +122,7 @@ section {
 
 .item-projeto a {
     text-decoration: none;
-    color: #000000;
+    color: var(--text-color);
 }
 
 .info-projetos {
@@ -127,7 +131,7 @@ section {
 
 .info-projetos h3,
 .info-projetos p {
-    color: #000000;
+    color: var(--text-color);
 }
 
 .img-contatos {
@@ -156,6 +160,31 @@ section {
     list-style-type: none;
 }
 
+.tecnologias-item {
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 5px;
+    border-radius: 5px;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-size: 1rem;
+    width: 150px;
+    text-align: center
+}
+
+.tecnologias-item:hover > .tooltip {
+    display: block;
+}
+
+
 .dark-mode-button {
     display: flex;
     color: #000000;
@@ -178,7 +207,7 @@ section {
     flex-direction: column;
     padding: 5px;
     list-style-type: none;
-    border: 1px solid var(--third-color);
+    border: 1px solid var(--text-color);
     border-radius: 5px;
     gap: 30px;
     margin: 10px;
@@ -190,8 +219,8 @@ section {
 }
 
 .github-api-itens div .projects-date {
-    color: #000000;
-    border: 1px solid var(--third-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
     border-radius: 20px;
     padding:  5px 10px;
     font-size: 1rem;
@@ -208,12 +237,12 @@ section {
     height: 12px;
     background-color: var(--secondary-color);
     margin-right: 5px;
-    border: 1px solid var(--third-color);
+    border: 1px solid var(--text-color);
 }
 
 .github-api-itens div, a {
     text-decoration: none;
-    color: #000000;
+    color: var(--text-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -234,4 +263,22 @@ section {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+[data-theme="dark"] {
+    --body-color: #333;
+    --primary-color: #333;
+    --secondary-color: #b9b8b8;
+    --third-color: #333;
+    --text-color: whitesmoke;
+    --shadow-color: whitesmoke;
+}
+
+[data-theme="light"] {
+    --body-color: whitesmoke;
+    --primary-color: white;
+    --secondary-color: rgb(84, 153, 249);
+    --third-color: #b9b8b8;
+    --text-color: #000000;
+    --shadow-color: #000000;
 }

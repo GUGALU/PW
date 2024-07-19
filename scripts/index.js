@@ -1,7 +1,10 @@
 // função para ativar e desativar dark mode
-function darkModeButton() {
-  const themeButton = document.getElementById("theme-button");
-}
+document.getElementById("theme-toggle").addEventListener("click", function () {
+  const body = document.body;
+  const temaAtual = body.getAttribute("data-theme");
+  const novoTema = temaAtual === "light" ? "dark" : "light";
+  body.setAttribute("data-theme", novoTema);
+});
 
 // função para copiar contatos para o clipboard/area de transferência
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -38,11 +41,13 @@ function fetchRepositories() {
 
       const data = await response.json();
 
+      data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
       data.map((item) => {
         let project = document.createElement("div");
 
         project.innerHTML = `
-          <div class="github-api-itens">
+          <a href="${item.html_url}" target="_blank" class="github-api-itens">
               <div>
                   <h4 class="projects-title">${item.name}</h4>
                   <span class="projects-date">${Intl.DateTimeFormat(
@@ -50,13 +55,12 @@ function fetchRepositories() {
                   ).format(new Date(item.created_at))}</span>
               </div>
               <div>
-                  <a href="${item.html_url}" target="_blank">${item.html_url}</a>
                   <span class="projects-language">
                       <span class="projects-circle"></span>
                       ${item.language}
                   </span>
               </div>
-          </div>
+          </a>
         `;
 
         repositories.appendChild(project);
@@ -70,7 +74,7 @@ function fetchRepositories() {
 fetchRepositories();
 
 // função para exibir o ano atual no footer
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const yearSpan = document.getElementById("current-year");
   const currentYear = new Date().getFullYear();
   yearSpan.textContent = currentYear;

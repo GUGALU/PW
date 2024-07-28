@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Repositórios GitHub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="scripts/index.js" rel="script">
+    <script defer src="scripts/index.js"></script>
+</head>
+
+<body id="theme-button" data-theme="light">
+    <header class="site-header">
+
+        <nav class="main-navigation">
+            <div class="switch-div">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <img src="./imgs/icons/dark-mode.png"/>
+            </div>
+            <button id="back-button" class="back-button" onclick="voltar()">Voltar</button>
+        </nav>
+
+    </header>
+
+    <main class="container">
+        <section id="github-repos">
+            <h2>Meus Repositórios GitHub</h2>
+            <div class="api-response"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Gustavo Polli. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

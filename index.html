@@ -9,7 +9,7 @@
     <meta name="description" content="Portifolio Gustavo Manoel Dias Polli">
     <meta name="keyword" content="desenvolvedor web, portifólio, 
     projetos web, programação">
-    <meta name="author" content="Gsuatvo Manoel Dias Polli">
+    <meta name="author" content="Gustavo Manoel Dias Polli">
     <meta property="og:title" content="">
     <meta property="og:description" content="Portfólio de">
     <meta property="og:image" content="URL_da_Imagem">
@@ -34,20 +34,24 @@
 </head>
 
 <body id="theme-button" data-theme="light">
-    <header class="site-header">
-
+    <header>
         <nav class="main-navigation">
             <div class="switch-div">
                 <label class="switch">
                     <input type="checkbox" id="theme-toggle">
                     <span class="slider round"></span>
                 </label>
-                <img src="./imgs/icons/dark-mode.png"/>
+                <img src="./imgs/icons/dark-mode.png" alt="Dark Mode"/>
             </div>
             <div>
-                <ul>
+                <!-- <div class="menu-toggle" id="menu-toggle">
+                    &#9776; 
+                </div> -->
+                <ul id="menu">
                     <li><a href="#sobreMim">Sobre mim</a></li>
                     <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="repositories.html">Meus Repositórios</a></li>
+                    <li><a href="validarCPF.html">Validar CPF</a></li>
                     <li><a href="#expericencia">Experiências</a></li>
                     <li><a href="#tecnologias">Tecnologias</a></li>
                     <li><a href="#formacao">Formação</a></li>
@@ -55,7 +59,6 @@
                 </ul>
             </div>
         </nav>
-
     </header>
 
     <main class="container">
@@ -293,16 +296,10 @@
                 </a>
             </div>
         </section>
-
-        <section id="git-hub-api" class="section">
-            <h2>Meus repositórios GitHub</h2>
-            <div class="api-response">
-            </div>
-        </section>
-
     </main>
+
     <footer class="site-footer">
-        <p>Feito por Gustavo Polli &copy; <span id="current-year"></span></p>
+        <p>&copy; <span id="current-year"></span> Gustavo Polli. Todos os direitos reservados.</p>
     </footer>
     <script src="scripts/index.js"></script>
 </body>

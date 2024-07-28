@@ -60,9 +60,11 @@ body {
 
 /* Ícone de menu hambúrguer */
 .menu-toggle {
-    display: none; /* Inicialmente oculto em telas grandes */
+    display: none;
+    /* Inicialmente oculto em telas grandes */
     font-size: 30px;
-    color: var(--primary-color); /* Substitua por uma cor válida */
+    color: var(--primary-color);
+    /* Substitua por uma cor válida */
     cursor: pointer;
 }
 

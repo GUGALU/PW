@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       const href = link.getAttribute("href");
       copyToClipboard(href);
 
-      window.alert(`${href} copiado para o clipboard.`);
+      window.alert(`${href} copiado para a área de transferência.`);
     });
   });
 });
